@@ -1,0 +1,396 @@
+/* ==========================================================================
+   Faine Labs - Crimson Red & Deep Black Theme & Interactive UI Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-obsidian: #0A0A0A;
+  --bg-darker: #050505;
+  --bg-surface: #121212;
+  --bg-surface-elevated: #18181B;
+  --bg-surface-hover: #27272A;
+  
+  --border-subtle: rgba(220, 38, 38, 0.2);
+  --border-glow: rgba(239, 68, 68, 0.45);
+  
+  --text-white: #F8FAFC;
+  --text-slate: #94A3B8;
+  --text-muted: #71717A;
+  
+  --accent-crimson: #DC2626;
+  --accent-crimson-bright: #EF4444;
+  --accent-crimson-dark: #991B1B;
+  --accent-crimson-hover: #B91C1C;
+  --accent-emerald: #10B981;
+  
+  --glow-crimson: 0 0 25px rgba(220, 38, 38, 0.45);
+  --glow-crimson-bright: 0 0 30px rgba(239, 68, 68, 0.55);
+  --glow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.7), 0 0 20px -2px rgba(220, 38, 38, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base Typography
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-obsidian);
+  color: var(--text-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-obsidian);
+  background-image: 
+    radial-gradient(at 15% 10%, rgba(220, 38, 38, 0.08) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(239, 68, 68, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 60%, rgba(153, 27, 27, 0.05) 0px, transparent 60%),
+    radial-gradient(at 80% 90%, rgba(220, 38, 38, 0.06) 0px, transparent 50%);
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #18181B;
+  border-radius: 4px;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #27272A;
+}
+
+/* --------------------------------------------------------------------------
+   Glassmorphism & Surface Utilities
+   -------------------------------------------------------------------------- */
+.glass-card {
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.8), 0 0 22px -2px rgba(220, 38, 38, 0.25);
+  transform: translateY(-2px);
+}
+
+.glass-card-static {
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+}
+
+.glass-nav {
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.15);
+}
+
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* --------------------------------------------------------------------------
+   Glowing Buttons & Accents (Crimson Red Theme)
+   -------------------------------------------------------------------------- */
+.btn-primary-glow {
+  position: relative;
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.45);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary-glow:hover {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.65), 0 4px 20px rgba(185, 28, 28, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-primary-glow:active {
+  transform: translateY(0);
+}
+
+.btn-primary-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: shine 4s infinite;
+}
+
+.btn-secondary-glow {
+  background: rgba(18, 18, 18, 0.85);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: #F8FAFC;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary-glow:hover {
+  background: rgba(24, 24, 27, 0.95);
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(220, 38, 38, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #FFFFFF 25%, #CBD5E1 65%, #EF4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-crimson {
+  background: linear-gradient(135deg, #F87171 0%, #EF4444 50%, #DC2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-glow {
+  background: rgba(220, 38, 38, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #FCA5A5;
+  box-shadow: 0 0 14px rgba(220, 38, 38, 0.2);
+}
+
+.badge-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6EE7B7;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Interactive UI Animations & Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  20% { transform: translateX(100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes radar {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.radar-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #EF4444;
+  animation: radar 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Live Chat & SMS Simulator Styles
+   -------------------------------------------------------------------------- */
+.chat-bubble-ai {
+  background: rgba(24, 24, 27, 0.95);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  border-radius: 1rem 1rem 1rem 0.25rem;
+  color: #F8FAFC;
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+  color: #FFFFFF;
+  border-radius: 1rem 1rem 0.25rem 1rem;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+}
+
+.sms-bubble-incoming {
+  background: #27272A;
+  color: #F8FAFC;
+  border-radius: 1rem 1rem 1rem 0.25rem;
+}
+
+.sms-bubble-outgoing {
+  background: #DC2626;
+  color: #FFFFFF;
+  border-radius: 1rem 1rem 0.25rem 1rem;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing-bounce 1.4s infinite ease-in-out both;
+}
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Range Slider Styles
+   -------------------------------------------------------------------------- */
+input[type="range"].custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #18181B;
+  border-radius: 9999px;
+  outline: none;
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #EF4444;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.85), 0 0 0 4px rgba(220, 38, 38, 0.25);
+  transition: all 0.15s ease;
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(239, 68, 68, 1), 0 0 0 6px rgba(220, 38, 38, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Modal & Overlay Animations
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  background: rgba(5, 5, 5, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity 0.25s ease-out;
+}
+
+.modal-content-card {
+  background: #121212;
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 35px rgba(220, 38, 38, 0.25);
+  border-radius: 1.25rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Notifications
+   -------------------------------------------------------------------------- */
+.toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast-item {
+  pointer-events: auto;
+  background: #18181B;
+  border: 1px solid rgba(220, 38, 38, 0.45);
+  color: #F8FAFC;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 0 18px rgba(220, 38, 38, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Code Block styling
+   -------------------------------------------------------------------------- */
+.code-box {
+  font-family: 'JetBrains Mono', monospace;
+  background: #050505;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: #EF4444;
+}
