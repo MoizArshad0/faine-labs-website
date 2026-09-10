@@ -29,37 +29,40 @@ Faine Labs is built specifically for:
 
 ## ⚡ Core Features & Interactive Sandboxes
 
-1. **Roofing Hero Section**:
-   - High-impact positioning: *"Stop Losing Roofing Leads You Already Paid For."*
-   - Interactive 6-step workflow sequence and live stream ticker tracking real-time roofing leads and inspections.
+1. **Hero Section**:
+   - Badge: *"AI-Powered Revenue Automation for Roofing Companies"*
+   - High-impact headline: *"Your Next Roofing Job Could Be Sitting in Your Missed Calls."*
+   - Description: *"Faine Labs instantly responds to missed calls and new inquiries, follows up automatically, and turns more opportunities into booked inspections."*
+   - Accent line: *"Never Let a Good Lead Go Cold."*
+   - Interactive 6-step workflow sequence and live stream ticker tracking real-time inquiries, follow-ups, and inspection bookings.
 
-2. **The Roofing Lead Leak (Problem Section)**:
-   - 6 Roofing-specific pain points: Calls missed while crews are on roofs, Homeowners calling 3–5 roofers at once, Sent estimates never followed up, Storm damage surges slipping away, $150+ paid ad leads wasted, and Disorganized inspection pipelines.
+2. **The Problem Section ("Every Missed Call Is a Potential Job")**:
+   - 6 Industry-specific reality points: Calls missed while crews are on roofs, Homeowners contacting multiple contractors, Estimates never followed up, Storm surges overwhelming the office, Expensive ad leads going cold, and Disorganized pipelines.
 
-3. **8 Outcome-Driven Roofing Automations**:
-   - Instant Roofing Lead Response (<5s)
-   - Missed Call Recovery (Sub-3s SMS Text-Back)
-   - AI Roofing Lead Qualification & Damage Intake
-   - Automated Roofing Follow-Up (Estimate & quote nurturing)
-   - Inspection & Estimate Booking (Direct calendar dispatch)
-   - Roofing Lead Nurturing (Long-cycle homeowner follow-up)
-   - Reputation & Review Automation (Post-job 5-star Google review collection)
-   - Roofing CRM & Pipeline Automation (Lead &rarr; Qualified &rarr; Inspection &rarr; Estimate &rarr; Won)
+3. **8 Outcome-Driven Automations**:
+   - 1. Instant Lead Response (Sub-5s response across web forms & ads)
+   - 2. Missed Call Recovery (Sub-3s SMS text-back for unanswered calls)
+   - 3. AI Lead Qualification (Captures project scope, leak urgency, address, & storm details)
+   - 4. Automated Follow-Up (Multi-touch sequences that pause when homeowners reply)
+   - 5. Inspection Booking (Direct 2-way sync with Google Calendar & Outlook)
+   - 6. Lead Nurturing (Re-engages past inquiries and aged estimates)
+   - 7. Review Automation (Automated 5-star Google review requests after completed jobs)
+   - 8. Pipeline Automation (Unified inbox and stage progression from lead to closed job)
 
-4. **The Roofing Lead Journey (How It Works)**:
-   - Complete 8-step journey visualizer from homeowner inquiry to booked inspection and closed contract.
+4. **The Customer Journey (How the System Works)**:
+   - Complete 8-step journey visualizer from new inquiry to instant AI response, qualification, missed-call text, follow-up, booked inspection, on-site estimate, and closed job.
 
 5. **Interactive AI Chatbot Simulator**:
-   - Custom-trained roofing AI responses for prompt chips (*"What automations are included for roofers?"*, *"Missed-call recovery for roofers"*, *"Storm damage & insurance leads"*, *"Book a 15-minute demo"*).
+   - Custom-trained conversational AI responses for prompt chips (*"What automations are included?"*, *"How does Missed-Call Recovery work?"*, *"Storm damage & insurance leads"*, *"Book a 15-minute demo"*).
 
 6. **Missed Call & SMS Workflow Simulator**:
    - Step-by-step homeowner conversation: Missed call while on a roof &rarr; Sub-3s text-back &rarr; Homeowner hail/leak inquiry &rarr; AI qualification & inspection booking &rarr; Confirmed inspection on estimator calendar.
 
 7. **Realistic Results & ROI Math**:
-   - Illustrative breakdown of recovering 3–5 lost roofing leads/month into completed replacements ($30k–$60k+ recovered revenue vs. $299/mo system).
+   - Illustrative breakdown of recovering 3–5 lost leads/month into completed replacements ($30k–$60k+ recovered revenue vs. $299/mo system).
 
-8. **Roofing-Specific FAQs & Demo Modal**:
-   - Addressing exclusive roofing focus, in-field crews, storm damage workflows, calendar sync, and fast 3–5 day turnkey onboarding.
+8. **FAQs & 15-Minute Demo Modal**:
+   - Addressing exclusive specialization for roofing companies, missed calls while on jobs, estimate follow-ups, calendar sync, storm damage handling, and 3–5 day turnkey onboarding.
 
 ---
 
