@@ -1,17 +1,17 @@
 /**
  * Faine Labs - Interactive UI & Automation Sandbox Engine
- * Crimson Red & Deep Black Edition
+ * Lead & Revenue Automation for Service Businesses
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initAIChatDemo();
   initSMSWorkflowDemo();
-  initROICalculator();
   initDashboardTicker();
   initModals();
   initForms();
   initFloatingWidget();
+  initCurrentYear();
   lucide.createIcons();
 });
 
@@ -40,7 +40,7 @@ function initNavbar() {
     });
   }
 
-  // Scrollspy & Glass navbar effect
+  // Glass navbar scroll effect
   const navbar = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
@@ -63,24 +63,28 @@ function initAIChatDemo() {
 
   const cannedKnowledge = [
     {
-      keywords: ['quote', 'price', 'pricing', 'cost', '299', 'package', 'all-in-one', 'plan'],
-      response: "Our complete All-in-One Growth Suite includes our full CRM, 24/7 AI Chatbot, automated SMS/Email pipelines, Missed Call Text-Back, and website hosting for **$299/month flat** with zero long-term contracts. Would you like to see how much you'd save?"
+      keywords: ['price', 'pricing', 'cost', '299', 'package', 'plan', 'fee'],
+      response: "Our complete **Lead & Revenue Automation** package is **$299/month flat** with no long-term contracts. It includes 24/7 AI lead response, sub-3s missed-call recovery, lead qualification, automated follow-up, appointment booking, and CRM pipeline automation. Would you like to schedule a 15-minute demo to see it?"
     },
     {
-      keywords: ['missed call', 'text-back', 'missed', 'call', 'phone'],
-      response: "Whenever you miss a customer call, Faine Labs triggers an instant personalized SMS within **3 seconds** (e.g. *'Hi! Sorry I missed your call, how can I help you?'*). It captures 60%+ of leads before they call your competitors!"
+      keywords: ['missed call', 'text-back', 'missed', 'call', 'phone', 'recovery'],
+      response: "When a potential customer calls and your team misses it, Faine Labs triggers an instant personalized SMS within seconds (e.g., *'Hi! Sorry we missed your call, how can we help you?'*). This engages prospects immediately before they call a competitor!"
     },
     {
-      keywords: ['book', 'schedule', 'demo', 'consult', 'appointment', 'time', 'tomorrow'],
-      response: "I'd be happy to get you scheduled! You can pick any available 15-minute slot with our team right here. 📅 Click 'Book Demo' or tap below to lock in a time."
+      keywords: ['book', 'schedule', 'demo', 'consult', 'appointment', 'time', 'walkthrough'],
+      response: "We'd be glad to show you a live 15-minute demonstration tailored to your business! Click **'Book a Free 15-Minute Demo'** to pick a time that works best for your team."
     },
     {
-      keywords: ['services', 'crm', 'pipeline', 'features', 'offer', 'gohighlevel'],
-      response: "Faine Labs builds and manages 7 core automated systems: 1) CRM & Pipeline Automation, 2) Lead Nurturing, 3) 24/7 AI Chatbots, 4) Missed Call Text-Back, 5) Automated Google Reviews, 6) Smart Booking, and 7) Conversion Funnels."
+      keywords: ['services', 'features', 'offer', 'automations', 'system', 'crm', 'pipeline'],
+      response: "Faine Labs builds 7 outcome-driven systems: 1) Instant Lead Response, 2) Missed-Call Recovery, 3) AI Lead Qualification, 4) Automated Follow-Up, 5) Appointment Booking, 6) CRM & Pipeline Automation, and 7) Lead Reactivation."
     },
     {
-      keywords: ['dental', 'clinic', 'real estate', 'plumbing', 'agency', 'contractor', 'home services'],
-      response: "We have pre-built, niche-specific automation playbooks designed specifically for high-conversion lead capture, instant review boosts, and automated reminders that eliminate no-shows!"
+      keywords: ['roofing', 'contractor', 'home services', 'hvac', 'plumbing', 'dental', 'clinic', 'med spa', 'real estate'],
+      response: "We configure industry-tailored workflows specifically for service businesses where fast lead response, capturing missed calls, and automated appointment booking directly increase revenue."
+    },
+    {
+      keywords: ['setup', 'fast', 'how long', 'timeline', 'onboarding'],
+      response: "Our onboarding is straightforward: 1) We audit your intake and calendar flow, 2) We customize your AI prompts and automated sequences, and 3) We deploy the system so you can start capturing leads immediately."
     }
   ];
 
@@ -95,7 +99,7 @@ function initAIChatDemo() {
         </div>
         <div class="chat-bubble-ai p-3.5 max-w-[82%] text-sm shadow-md">
           ${isHtml ? text : formatMarkdown(text)}
-          <span class="block text-[10px] text-zinc-400 mt-1 text-right">Just now • AI Agent</span>
+          <span class="block text-[10px] text-zinc-400 mt-1 text-right">Just now • AI Agent Demo</span>
         </div>
       `;
     } else {
@@ -156,10 +160,10 @@ function initAIChatDemo() {
 
       let reply = matched 
         ? matched.response 
-        : `Thanks for reaching out! Our AI agent qualifies leads 24/7, routes hot opportunities to your team, and books appointments straight into your calendar. Would you like to test drive the setup for your business?`;
+        : `Thanks for testing! Our AI system engages leads, answers questions, and guides prospects to appointment booking. Would you like to schedule a 15-minute demo to see how it works for your service business?`;
 
       appendMessage('ai', reply);
-    }, 900);
+    }, 800);
   }
 
   if (chatSendBtn && chatInput) {
@@ -198,19 +202,19 @@ function initAIChatDemo() {
           </div>
           <div class="chat-bubble-ai p-3.5 max-w-[82%] text-sm shadow-md">
             <p class="font-medium text-white mb-1">Hello! I'm the Faine Labs AI Assistant 👋</p>
-            <p class="text-zinc-300">I can qualify leads, explain our automated systems, or book appointments 24/7. Ask me anything or click a sample prompt below!</p>
-            <span class="block text-[10px] text-zinc-400 mt-2 text-right">Online • Instant Response</span>
+            <p class="text-zinc-300">I demonstrate how our system responds to inbound leads, answers questions, and guides prospects to booked appointments. Try asking a question or click a prompt below!</p>
+            <span class="block text-[10px] text-zinc-400 mt-2 text-right">Online • Instant Response Demo</span>
           </div>
         </div>
       `;
       lucide.createIcons();
-      showToast('Chat conversation reset');
+      showToast('Demo chat conversation reset');
     });
   }
 }
 
 /* ==========================================================================
-   3. Missed Call & SMS Nurture Workflow Simulator
+   3. Missed Call & Automated SMS Workflow Simulator
    ========================================================================== */
 function initSMSWorkflowDemo() {
   const triggerBtn = document.getElementById('triggerSmsDemoBtn');
@@ -223,15 +227,15 @@ function initSMSWorkflowDemo() {
     {
       type: 'missed-call',
       title: 'Incoming Call Missed',
-      badge: '00:00 - Trigger',
+      badge: 'Step 1: Missed Call',
       html: `
         <div class="p-3 bg-red-950/30 border border-red-500/40 rounded-lg flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-red-600/20 text-red-400 flex items-center justify-center">
-            <i data-lucide="phone-missed" class="w-5 h-5"></i>
+          <div class="w-8 h-8 rounded-full bg-red-600/20 text-red-400 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="phone-missed" class="w-4 h-4"></i>
           </div>
           <div>
             <div class="text-xs font-semibold text-red-300">Missed Call Detected</div>
-            <div class="text-[11px] text-zinc-400">+1 (512) 839-4921 • 10:14 AM</div>
+            <div class="text-[11px] text-zinc-400">+1 (512) •••-4921 • Inbound Caller</div>
           </div>
         </div>
       `
@@ -239,12 +243,12 @@ function initSMSWorkflowDemo() {
     {
       type: 'auto-sms',
       title: 'Instant SMS Auto-Sent (< 3s)',
-      badge: '00:02 - Automated Outreach',
+      badge: 'Step 2: Instant Response',
       html: `
         <div class="flex justify-end">
           <div class="sms-bubble-outgoing p-3 max-w-[85%] text-xs shadow-md">
-            <p>Hi there! This is Sarah from Faine Labs. Sorry I missed your call! How can I help you today?</p>
-            <span class="block text-[10px] text-red-200 mt-1 text-right">10:14 AM • Auto-Sent in 2.1s</span>
+            <p>Hi! This is Faine Labs. Sorry we missed your call! How can we help you today?</p>
+            <span class="block text-[10px] text-red-200 mt-1 text-right">Auto-Sent in 2.1s</span>
           </div>
         </div>
       `
@@ -252,45 +256,45 @@ function initSMSWorkflowDemo() {
     {
       type: 'lead-reply',
       title: 'Lead Responded via SMS',
-      badge: '00:45 - Customer Response',
+      badge: 'Step 3: Lead Reply',
       html: `
         <div class="flex justify-start">
           <div class="sms-bubble-incoming p-3 max-w-[85%] text-xs shadow-md">
-            <p>Hey Sarah! I saw your post. We need automated CRM lead follow-up and review requests for our clinic.</p>
-            <span class="block text-[10px] text-zinc-400 mt-1">10:15 AM</span>
+            <p>Hey! We're looking for automated lead response and missed-call follow-up for our service team.</p>
+            <span class="block text-[10px] text-zinc-400 mt-1">Just now</span>
           </div>
         </div>
       `
     },
     {
       type: 'ai-booking',
-      title: 'AI Sent Smart Booking Link',
-      badge: '00:48 - AI Qualification',
+      title: 'AI Qualifies & Offers Booking',
+      badge: 'Step 4: AI Qualification',
       html: `
         <div class="flex justify-end">
           <div class="sms-bubble-outgoing p-3 max-w-[85%] text-xs shadow-md">
-            <p>Awesome! Our system automates both seamlessly. Here's a link to pick a quick 15-min demo: <strong class="underline">fainelabs.com/book</strong></p>
-            <span class="block text-[10px] text-red-200 mt-1 text-right">10:15 AM • AI Automation</span>
+            <p>We can definitely help with that! Here is a direct link to pick a quick 15-minute demo: <strong class="underline">fainelabs.com/demo</strong></p>
+            <span class="block text-[10px] text-red-200 mt-1 text-right">AI Assistant</span>
           </div>
         </div>
       `
     },
     {
       type: 'crm-update',
-      title: 'CRM Pipeline Stage Updated',
-      badge: '01:10 - Opportunity Logged',
+      title: 'Appointment Booked & CRM Updated',
+      badge: 'Step 5: Appointment Booked',
       html: `
         <div class="p-3 bg-emerald-950/30 border border-emerald-500/40 rounded-lg flex items-center justify-between">
           <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="calendar-check" class="w-4 h-4"></i>
             </div>
             <div>
-              <div class="text-xs font-semibold text-emerald-300">Appointment Booked & Deal Created</div>
-              <div class="text-[10px] text-zinc-400">All-in-One Engine • Assigned to Team</div>
+              <div class="text-xs font-semibold text-emerald-300">Appointment Booked & Logged</div>
+              <div class="text-[10px] text-zinc-400">Synced to Calendar & CRM Pipeline</div>
             </div>
           </div>
-          <span class="px-2 py-0.5 text-[10px] bg-emerald-500/20 text-emerald-300 rounded font-medium">Won</span>
+          <span class="px-2 py-0.5 text-[10px] bg-emerald-500/20 text-emerald-300 rounded font-medium">Confirmed</span>
         </div>
       `
     }
@@ -302,7 +306,7 @@ function initSMSWorkflowDemo() {
     currentStep = 0;
     smsScreen.innerHTML = '';
     triggerBtn.disabled = true;
-    triggerBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Simulating Automation...`;
+    triggerBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Running Demonstration...`;
     lucide.createIcons();
 
     function nextStep() {
@@ -331,13 +335,13 @@ function initSMSWorkflowDemo() {
         smsScreen.scrollTop = smsScreen.scrollHeight;
 
         currentStep++;
-        setTimeout(nextStep, 1400);
+        setTimeout(nextStep, 1300);
       } else {
         isSimulating = false;
         triggerBtn.disabled = false;
-        triggerBtn.innerHTML = `<i data-lucide="play" class="w-4 h-4"></i> Replay Full Automation Flow`;
+        triggerBtn.innerHTML = `<i data-lucide="play" class="w-4 h-4"></i> Replay Flow Simulation`;
         lucide.createIcons();
-        showToast('Workflow completed: 1 lead saved from missed call!');
+        showToast('Demonstration complete: Missed call converted to appointment!');
       }
     }
 
@@ -350,54 +354,7 @@ function initSMSWorkflowDemo() {
 }
 
 /* ==========================================================================
-   4. Interactive ROI & Software Replacement Calculator
-   ========================================================================== */
-function initROICalculator() {
-  const leadSlider = document.getElementById('leadVolumeSlider');
-  const leadValueDisplay = document.getElementById('leadVolumeValue');
-  const toolCheckboxes = document.querySelectorAll('.tool-checkbox');
-  
-  const oldCostDisplay = document.getElementById('calcOldCost');
-  const newCostDisplay = document.getElementById('calcNewCost');
-  const monthlySavingsDisplay = document.getElementById('calcMonthlySavings');
-  const annualSavingsDisplay = document.getElementById('calcAnnualSavings');
-  const revenueBoostDisplay = document.getElementById('calcRevenueBoost');
-
-  function calculate() {
-    const leads = parseInt(leadSlider.value, 10);
-    leadValueDisplay.textContent = `${leads} leads / mo`;
-
-    let totalToolCost = 0;
-    toolCheckboxes.forEach(cb => {
-      if (cb.checked) {
-        totalToolCost += parseFloat(cb.getAttribute('data-cost') || 0);
-      }
-    });
-
-    const faineLabsCost = 299;
-    const monthlySavings = Math.max(0, totalToolCost - faineLabsCost);
-    const annualSavings = monthlySavings * 12;
-
-    // Estimate recovered revenue from missed calls & 24/7 AI qualification
-    const recoveredDeals = Math.round(leads * 0.12);
-    const estimatedRecoveredRev = recoveredDeals * 350;
-
-    oldCostDisplay.textContent = `$${totalToolCost.toLocaleString()}/mo`;
-    newCostDisplay.textContent = `$${faineLabsCost}/mo`;
-    monthlySavingsDisplay.textContent = `$${monthlySavings.toLocaleString()}/mo`;
-    annualSavingsDisplay.textContent = `$${annualSavings.toLocaleString()}/yr`;
-    revenueBoostDisplay.textContent = `+$${estimatedRecoveredRev.toLocaleString()}/mo`;
-  }
-
-  if (leadSlider) {
-    leadSlider.addEventListener('input', calculate);
-    toolCheckboxes.forEach(cb => cb.addEventListener('change', calculate));
-    calculate();
-  }
-}
-
-/* ==========================================================================
-   5. Dashboard Real-Time Live Activity Ticker
+   4. Live Workflow Activity Stream (Simulated Demonstration)
    ========================================================================== */
 function initDashboardTicker() {
   const tickerContainer = document.getElementById('heroLiveFeed');
@@ -409,35 +366,35 @@ function initDashboardTicker() {
       color: 'text-emerald-400',
       bg: 'bg-emerald-500/20',
       title: 'Missed Call Recovered',
-      desc: 'Auto SMS sent to +1 (702) •••-9182 in 1.9s'
+      desc: 'Automated text outreach sent to inbound caller'
     },
     {
       icon: 'bot',
       color: 'text-red-400',
       bg: 'bg-red-500/20',
-      title: 'AI Chatbot Converted Lead',
-      desc: 'Discovery call booked with Dental Care Pro'
+      title: 'AI Lead Qualified',
+      desc: 'Inquiry criteria & service details collected'
+    },
+    {
+      icon: 'calendar-check',
+      color: 'text-emerald-400',
+      bg: 'bg-emerald-500/20',
+      title: 'Appointment Scheduled',
+      desc: 'Slot booked directly on team calendar'
+    },
+    {
+      icon: 'repeat',
+      color: 'text-rose-400',
+      bg: 'bg-rose-500/20',
+      title: 'Automated Follow-Up Sent',
+      desc: 'Multi-channel sequence re-engaged lead'
     },
     {
       icon: 'star',
       color: 'text-amber-400',
       bg: 'bg-amber-500/20',
-      title: '5★ Review Received',
-      desc: 'Automated SMS review campaign generated Google review'
-    },
-    {
-      icon: 'dollar-sign',
-      color: 'text-rose-400',
-      bg: 'bg-rose-500/20',
-      title: 'Pipeline Deal Won',
-      desc: 'All-In-One setup completed ($2,400 deal value)'
-    },
-    {
-      icon: 'mail',
-      color: 'text-red-300',
-      bg: 'bg-red-500/20',
-      title: 'Nurture Drip Triggered',
-      desc: 'Multi-channel sequence Day 3 email & SMS dispatched'
+      title: 'Review Request Dispatched',
+      desc: 'Post-service customer feedback prompt triggered'
     }
   ];
 
@@ -459,7 +416,7 @@ function initDashboardTicker() {
           <div class="text-[11px] text-zinc-400">${ev.desc}</div>
         </div>
       </div>
-      <span class="text-[10px] text-red-400 font-mono">Just now</span>
+      <span class="text-[10px] text-red-400 font-mono">Active</span>
     `;
 
     tickerContainer.prepend(item);
@@ -475,23 +432,17 @@ function initDashboardTicker() {
   pushEvent();
   pushEvent();
 
-  // Periodically insert live simulated pulses
+  // Pulse new stream event periodically
   setInterval(pushEvent, 4500);
 }
 
 /* ==========================================================================
-   6. Modals & Dialog Handling
+   5. Modals & Dialog Handling
    ========================================================================== */
 function initModals() {
-  // Booking Modal
   const bookDemoBtns = document.querySelectorAll('.open-booking-modal');
   const bookingModal = document.getElementById('bookingModal');
   const closeBookingModal = document.getElementById('closeBookingModal');
-
-  // Checkout / Get Started Modal
-  const getStartedBtns = document.querySelectorAll('.open-get-started-modal');
-  const checkoutModal = document.getElementById('checkoutModal');
-  const closeCheckoutModal = document.getElementById('closeCheckoutModal');
 
   function openModal(modal) {
     if (!modal) return;
@@ -518,43 +469,28 @@ function initModals() {
     closeBookingModal.addEventListener('click', () => closeModal(bookingModal));
   }
 
-  getStartedBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(checkoutModal);
+  // Backdrop clicks
+  if (bookingModal) {
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        closeModal(bookingModal);
+      }
     });
-  });
-
-  if (closeCheckoutModal) {
-    closeCheckoutModal.addEventListener('click', () => closeModal(checkoutModal));
   }
 
-  // Backdrop clicks
-  [bookingModal, checkoutModal].forEach(modal => {
-    if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeModal(modal);
-        }
-      });
-    }
-  });
-
-  // ESC key closes modals
+  // ESC key closes modal
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeModal(bookingModal);
-      closeModal(checkoutModal);
     }
   });
 }
 
 /* ==========================================================================
-   7. Form Submissions & Toast Feedback
+   6. Form Submissions & Toast Feedback
    ========================================================================== */
 function initForms() {
   const bookingForm = document.getElementById('bookingForm');
-  const checkoutForm = document.getElementById('checkoutForm');
   const newsletterForm = document.getElementById('newsletterForm');
 
   if (bookingForm) {
@@ -563,37 +499,21 @@ function initForms() {
       const btn = bookingForm.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Confirming Strategy Session...`;
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Scheduling Your Demo...`;
       lucide.createIcons();
 
       setTimeout(() => {
         btn.disabled = false;
         btn.innerHTML = originalText;
         bookingForm.reset();
-        document.getElementById('bookingModal').classList.add('hidden');
+        const bookingModal = document.getElementById('bookingModal');
+        if (bookingModal) {
+          bookingModal.classList.add('hidden');
+          bookingModal.classList.remove('flex');
+        }
         document.body.style.overflow = 'auto';
-        showToast('🎉 Strategy Call Confirmed! Check your email for calendar invite.');
-      }, 1200);
-    });
-  }
-
-  if (checkoutForm) {
-    checkoutForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = checkoutForm.querySelector('button[type="submit"]');
-      const originalText = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Initializing Onboarding...`;
-      lucide.createIcons();
-
-      setTimeout(() => {
-        btn.disabled = false;
-        btn.innerHTML = originalText;
-        checkoutForm.reset();
-        document.getElementById('checkoutModal').classList.add('hidden');
-        document.body.style.overflow = 'auto';
-        showToast('🚀 Welcome to Faine Labs! Our team will contact you within 2 business hours.');
-      }, 1400);
+        showToast('Demo request received! We will contact you shortly to confirm your time.');
+      }, 1000);
     });
   }
 
@@ -601,13 +521,13 @@ function initForms() {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
       newsletterForm.reset();
-      showToast('Subscribed to Faine Labs Automation Insights!');
+      showToast('Subscribed to Faine Labs automation updates!');
     });
   }
 }
 
 /* ==========================================================================
-   8. Floating Quick Widget
+   7. Floating Quick Widget
    ========================================================================== */
 function initFloatingWidget() {
   const toggleBtn = document.getElementById('floatingWidgetToggle');
@@ -628,9 +548,16 @@ function initFloatingWidget() {
 }
 
 /* ==========================================================================
-   Utility Helpers
+   8. Utility Helpers
    ========================================================================== */
-function showToast(message, type = 'success') {
+function initCurrentYear() {
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+}
+
+function showToast(message) {
   const container = document.getElementById('toastContainer') || createToastContainer();
   const toast = document.createElement('div');
   toast.className = 'toast-item';
