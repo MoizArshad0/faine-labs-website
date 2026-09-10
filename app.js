@@ -1,6 +1,6 @@
 /**
  * Faine Labs - Interactive UI & Automation Sandbox Engine
- * Lead & Revenue Automation for Service Businesses
+ * AI Lead Response & Revenue Automation for Roofing Companies
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,7 +52,7 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   2. Interactive AI Chatbot Demo Simulator
+   2. Interactive AI Chatbot Demo Simulator (Roofing Exclusive)
    ========================================================================== */
 function initAIChatDemo() {
   const chatMessages = document.getElementById('chatMessages');
@@ -64,27 +64,35 @@ function initAIChatDemo() {
   const cannedKnowledge = [
     {
       keywords: ['price', 'pricing', 'cost', '299', 'package', 'plan', 'fee'],
-      response: "Our complete **Lead & Revenue Automation** package is **$299/month flat** with no long-term contracts. It includes 24/7 AI lead response, sub-3s missed-call recovery, lead qualification, automated follow-up, appointment booking, and CRM pipeline automation. Would you like to schedule a 15-minute demo to see it?"
+      response: "Our complete **Roofing Revenue Automation** system is **$299/month flat** with no long-term contracts. It includes 24/7 AI lead response, sub-3s missed-call text-back, roof damage qualification, automated estimate follow-up, inspection booking, review automation, and CRM pipeline automation. Would you like to schedule a 15-minute demo to see it?"
     },
     {
-      keywords: ['missed call', 'text-back', 'missed', 'call', 'phone', 'recovery'],
-      response: "When a potential customer calls and your team misses it, Faine Labs triggers an instant personalized SMS within seconds (e.g., *'Hi! Sorry we missed your call, how can we help you?'*). This engages prospects immediately before they call a competitor!"
+      keywords: ['missed call', 'missed-call', 'text-back', 'missed', 'call', 'phone', 'recovery', 'on a roof'],
+      response: "When a homeowner calls your roofing company and your team misses it (e.g. while crews are on a roof or after hours), Faine Labs triggers an instant personalized SMS in under 3 seconds (*'Hi! This is Apex Roofing. Sorry we missed your call—we are currently on a roof. How can we help you today?'*). This engages the homeowner immediately before they call another contractor!"
+    },
+    {
+      keywords: ['storm', 'hail', 'wind', 'insurance', 'claim', 'restoration', 'tarp', 'leak'],
+      response: "Yes! The system is specifically trained for storm damage and insurance restoration workflows. When severe hail or wind hits, the AI collects storm dates, damage severity, leak locations, and insurance carrier info before scheduling an on-site inspection for your estimators."
     },
     {
       keywords: ['book', 'schedule', 'demo', 'consult', 'appointment', 'time', 'walkthrough'],
-      response: "We'd be glad to show you a live 15-minute demonstration tailored to your business! Click **'Book a Free 15-Minute Demo'** to pick a time that works best for your team."
+      response: "We would be glad to show you a live 15-minute demonstration tailored specifically to your roofing company! Click **'Book a Free 15-Minute Demo'** to pick a time that works best for your team."
     },
     {
-      keywords: ['services', 'features', 'offer', 'automations', 'system', 'crm', 'pipeline'],
-      response: "Faine Labs builds 7 outcome-driven systems: 1) Instant Lead Response, 2) Missed-Call Recovery, 3) AI Lead Qualification, 4) Automated Follow-Up, 5) Appointment Booking, 6) CRM & Pipeline Automation, and 7) Lead Reactivation."
+      keywords: ['services', 'features', 'offer', 'automations', 'system', 'crm', 'pipeline', 'included'],
+      response: "Faine Labs builds 8 revenue automations exclusively for roofing companies: 1) Instant Roofing Lead Response, 2) Missed-Call Recovery, 3) AI Roofing Lead Qualification, 4) Automated Follow-Up, 5) Inspection & Estimate Booking, 6) Roofing Lead Nurturing, 7) Reputation & Review Automation, and 8) Roofing CRM & Pipeline Automation."
     },
     {
-      keywords: ['roofing', 'contractor', 'home services', 'hvac', 'plumbing', 'dental', 'clinic', 'med spa', 'real estate'],
-      response: "We configure industry-tailored workflows specifically for service businesses where fast lead response, capturing missed calls, and automated appointment booking directly increase revenue."
+      keywords: ['roofing', 'contractor', 'residential', 'commercial', 'replacement', 'repair', 'niche', 'only'],
+      response: "Yes, Faine Labs works **exclusively with roofing companies**—including residential roof replacement contractors, commercial roofers, roof repair specialists, and insurance restoration teams. Everything we build is tailored to roofing lead capture and inspection scheduling."
     },
     {
-      keywords: ['setup', 'fast', 'how long', 'timeline', 'onboarding'],
-      response: "Our onboarding is straightforward: 1) We audit your intake and calendar flow, 2) We customize your AI prompts and automated sequences, and 3) We deploy the system so you can start capturing leads immediately."
+      keywords: ['setup', 'fast', 'how long', 'timeline', 'onboarding', 'start'],
+      response: "Our onboarding is quick and turnkey (typically 3 to 5 business days): 1) We audit your lead flow and calendar setup, 2) We custom-train your roofing AI on your services and territory, and 3) We deploy the system so you can start capturing leads immediately."
+    },
+    {
+      keywords: ['inspection', 'calendar', 'google calendar', 'outlook', 'estimator'],
+      response: "When a qualified homeowner wants an estimate, the AI presents available inspection windows synced with your Google Calendar or Outlook in real time. Once booked, it sends automated reminder texts to the homeowner so estimators don't deal with no-shows."
     }
   ];
 
@@ -99,7 +107,7 @@ function initAIChatDemo() {
         </div>
         <div class="chat-bubble-ai p-3.5 max-w-[82%] text-sm shadow-md">
           ${isHtml ? text : formatMarkdown(text)}
-          <span class="block text-[10px] text-zinc-400 mt-1 text-right">Just now • AI Agent Demo</span>
+          <span class="block text-[10px] text-zinc-400 mt-1 text-right">Just now • Roofing AI Agent</span>
         </div>
       `;
     } else {
@@ -160,7 +168,7 @@ function initAIChatDemo() {
 
       let reply = matched 
         ? matched.response 
-        : `Thanks for testing! Our AI system engages leads, answers questions, and guides prospects to appointment booking. Would you like to schedule a 15-minute demo to see how it works for your service business?`;
+        : `Thanks for testing! Our AI system engages homeowners, qualifies roof repair or replacement needs, and books inspections directly into your team calendar. Would you like to schedule a 15-minute demo to see how it works for your roofing company?`;
 
       appendMessage('ai', reply);
     }, 800);
@@ -201,20 +209,20 @@ function initAIChatDemo() {
             <i data-lucide="bot" class="w-4 h-4 text-white"></i>
           </div>
           <div class="chat-bubble-ai p-3.5 max-w-[82%] text-sm shadow-md">
-            <p class="font-medium text-white mb-1">Hello! I'm the Faine Labs AI Assistant 👋</p>
-            <p class="text-zinc-300">I demonstrate how our system responds to inbound leads, answers questions, and guides prospects to booked appointments. Try asking a question or click a prompt below!</p>
-            <span class="block text-[10px] text-zinc-400 mt-2 text-right">Online • Instant Response Demo</span>
+            <p class="font-medium text-white mb-1">Hello! I'm the Faine Labs Roofing AI Assistant 👋</p>
+            <p class="text-zinc-300">I handle incoming homeowner inquiries for roofing companies, qualify roof damage, and book inspections. Try asking a question or click a prompt below!</p>
+            <span class="block text-[10px] text-zinc-400 mt-2 text-right">Online • Roofing AI Agent</span>
           </div>
         </div>
       `;
       lucide.createIcons();
-      showToast('Demo chat conversation reset');
+      showToast('Roofing demo chat reset');
     });
   }
 }
 
 /* ==========================================================================
-   3. Missed Call & Automated SMS Workflow Simulator
+   3. Missed Call & Automated SMS Workflow Simulator (Roofing Scenario)
    ========================================================================== */
 function initSMSWorkflowDemo() {
   const triggerBtn = document.getElementById('triggerSmsDemoBtn');
@@ -226,7 +234,7 @@ function initSMSWorkflowDemo() {
   const stepsData = [
     {
       type: 'missed-call',
-      title: 'Incoming Call Missed',
+      title: 'Incoming Homeowner Call Missed',
       badge: 'Step 1: Missed Call',
       html: `
         <div class="p-3 bg-red-950/30 border border-red-500/40 rounded-lg flex items-center gap-3">
@@ -234,20 +242,20 @@ function initSMSWorkflowDemo() {
             <i data-lucide="phone-missed" class="w-4 h-4"></i>
           </div>
           <div>
-            <div class="text-xs font-semibold text-red-300">Missed Call Detected</div>
-            <div class="text-[11px] text-zinc-400">+1 (512) •••-4921 • Inbound Caller</div>
+            <div class="text-xs font-semibold text-red-300">Missed Call from Homeowner</div>
+            <div class="text-[11px] text-zinc-400">+1 (512) •••-4921 • Crew is on a roof</div>
           </div>
         </div>
       `
     },
     {
       type: 'auto-sms',
-      title: 'Instant SMS Auto-Sent (< 3s)',
+      title: 'Instant SMS Text-Back (< 3s)',
       badge: 'Step 2: Instant Response',
       html: `
         <div class="flex justify-end">
           <div class="sms-bubble-outgoing p-3 max-w-[85%] text-xs shadow-md">
-            <p>Hi! This is Faine Labs. Sorry we missed your call! How can we help you today?</p>
+            <p>Hi! This is Apex Roofing. Sorry we missed your call—we're currently on a roof. Are you looking for a roof repair, full replacement, or storm damage inspection?</p>
             <span class="block text-[10px] text-red-200 mt-1 text-right">Auto-Sent in 2.1s</span>
           </div>
         </div>
@@ -255,12 +263,12 @@ function initSMSWorkflowDemo() {
     },
     {
       type: 'lead-reply',
-      title: 'Lead Responded via SMS',
-      badge: 'Step 3: Lead Reply',
+      title: 'Homeowner Replies with Damage Details',
+      badge: 'Step 3: Homeowner Reply',
       html: `
         <div class="flex justify-start">
           <div class="sms-bubble-incoming p-3 max-w-[85%] text-xs shadow-md">
-            <p>Hey! We're looking for automated lead response and missed-call follow-up for our service team.</p>
+            <p>Hi, we had severe hail yesterday and have a leak in our ceiling. We need someone to inspect the roof ASAP for our insurance claim.</p>
             <span class="block text-[10px] text-zinc-400 mt-1">Just now</span>
           </div>
         </div>
@@ -268,21 +276,21 @@ function initSMSWorkflowDemo() {
     },
     {
       type: 'ai-booking',
-      title: 'AI Qualifies & Offers Booking',
+      title: 'AI Qualifies Urgency & Offers Inspection',
       badge: 'Step 4: AI Qualification',
       html: `
         <div class="flex justify-end">
           <div class="sms-bubble-outgoing p-3 max-w-[85%] text-xs shadow-md">
-            <p>We can definitely help with that! Here is a direct link to pick a quick 15-minute demo: <strong class="underline">fainelabs.com/demo</strong></p>
-            <span class="block text-[10px] text-red-200 mt-1 text-right">AI Assistant</span>
+            <p>We can definitely get an inspector out to document the hail damage and help with your claim. Pick a convenient time for your Free Roof Inspection here: <strong class="underline">fainelabs.com/book-inspection</strong></p>
+            <span class="block text-[10px] text-red-200 mt-1 text-right">Roofing AI Assistant</span>
           </div>
         </div>
       `
     },
     {
       type: 'crm-update',
-      title: 'Appointment Booked & CRM Updated',
-      badge: 'Step 5: Appointment Booked',
+      title: 'Roof Inspection Booked & Estimator Dispatched',
+      badge: 'Step 5: Inspection Booked',
       html: `
         <div class="p-3 bg-emerald-950/30 border border-emerald-500/40 rounded-lg flex items-center justify-between">
           <div class="flex items-center gap-2.5">
@@ -290,8 +298,8 @@ function initSMSWorkflowDemo() {
               <i data-lucide="calendar-check" class="w-4 h-4"></i>
             </div>
             <div>
-              <div class="text-xs font-semibold text-emerald-300">Appointment Booked & Logged</div>
-              <div class="text-[10px] text-zinc-400">Synced to Calendar & CRM Pipeline</div>
+              <div class="text-xs font-semibold text-emerald-300">Free Roof Inspection Booked!</div>
+              <div class="text-[10px] text-zinc-400">Tomorrow at 10:00 AM • Synced to Estimator Route</div>
             </div>
           </div>
           <span class="px-2 py-0.5 text-[10px] bg-emerald-500/20 text-emerald-300 rounded font-medium">Confirmed</span>
@@ -306,7 +314,7 @@ function initSMSWorkflowDemo() {
     currentStep = 0;
     smsScreen.innerHTML = '';
     triggerBtn.disabled = true;
-    triggerBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Running Demonstration...`;
+    triggerBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Running Roofing Flow...`;
     lucide.createIcons();
 
     function nextStep() {
@@ -339,9 +347,9 @@ function initSMSWorkflowDemo() {
       } else {
         isSimulating = false;
         triggerBtn.disabled = false;
-        triggerBtn.innerHTML = `<i data-lucide="play" class="w-4 h-4"></i> Replay Flow Simulation`;
+        triggerBtn.innerHTML = `<i data-lucide="play" class="w-4 h-4"></i> Replay Roofing Flow`;
         lucide.createIcons();
-        showToast('Demonstration complete: Missed call converted to appointment!');
+        showToast('Simulation complete: Missed call converted into a booked roof inspection!');
       }
     }
 
@@ -354,8 +362,8 @@ function initSMSWorkflowDemo() {
 }
 
 /* ==========================================================================
-   4. Live Workflow Activity Stream (Simulated Demonstration)
-   ========================================================================== */
+   4. Live Workflow Activity Stream (Roofing Stream)
+   ========================================================================= */
 function initDashboardTicker() {
   const tickerContainer = document.getElementById('heroLiveFeed');
   if (!tickerContainer) return;
@@ -366,35 +374,42 @@ function initDashboardTicker() {
       color: 'text-emerald-400',
       bg: 'bg-emerald-500/20',
       title: 'Missed Call Recovered',
-      desc: 'Automated text outreach sent to inbound caller'
+      desc: 'Sub-3s SMS text sent to homeowner inquiring about roof leak'
     },
     {
       icon: 'bot',
       color: 'text-red-400',
       bg: 'bg-red-500/20',
-      title: 'AI Lead Qualified',
-      desc: 'Inquiry criteria & service details collected'
+      title: 'Storm Damage Lead Qualified',
+      desc: 'Hail damage criteria & insurance provider details gathered'
     },
     {
       icon: 'calendar-check',
       color: 'text-emerald-400',
       bg: 'bg-emerald-500/20',
-      title: 'Appointment Scheduled',
-      desc: 'Slot booked directly on team calendar'
+      title: 'Roof Inspection Booked',
+      desc: 'Full replacement estimate confirmed on estimator calendar'
     },
     {
       icon: 'repeat',
       color: 'text-rose-400',
       bg: 'bg-rose-500/20',
-      title: 'Automated Follow-Up Sent',
-      desc: 'Multi-channel sequence re-engaged lead'
+      title: 'Estimate Follow-Up Sent',
+      desc: 'Automated quote follow-up SMS re-engaged homeowner'
     },
     {
       icon: 'star',
       color: 'text-amber-400',
       bg: 'bg-amber-500/20',
-      title: 'Review Request Dispatched',
-      desc: 'Post-service customer feedback prompt triggered'
+      title: '5-Star Review Dispatched',
+      desc: 'Post-roof installation Google review request triggered'
+    },
+    {
+      icon: 'refresh-cw',
+      color: 'text-teal-400',
+      bg: 'bg-teal-500/20',
+      title: 'Cold Roofing Lead Reactivated',
+      desc: 'Spring storm inspection reminder converted to booking'
     }
   ];
 
@@ -438,7 +453,7 @@ function initDashboardTicker() {
 
 /* ==========================================================================
    5. Modals & Dialog Handling
-   ========================================================================== */
+   ========================================================================= */
 function initModals() {
   const bookDemoBtns = document.querySelectorAll('.open-booking-modal');
   const bookingModal = document.getElementById('bookingModal');
@@ -488,7 +503,7 @@ function initModals() {
 
 /* ==========================================================================
    6. Form Submissions & Toast Feedback
-   ========================================================================== */
+   ========================================================================= */
 function initForms() {
   const bookingForm = document.getElementById('bookingForm');
   const newsletterForm = document.getElementById('newsletterForm');
@@ -499,7 +514,7 @@ function initForms() {
       const btn = bookingForm.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Scheduling Your Demo...`;
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Scheduling Roofing Demo...`;
       lucide.createIcons();
 
       setTimeout(() => {
@@ -512,7 +527,7 @@ function initForms() {
           bookingModal.classList.remove('flex');
         }
         document.body.style.overflow = 'auto';
-        showToast('Demo request received! We will contact you shortly to confirm your time.');
+        showToast('Roofing demo request received! We will contact you shortly to confirm your time.');
       }, 1000);
     });
   }
@@ -521,14 +536,14 @@ function initForms() {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
       newsletterForm.reset();
-      showToast('Subscribed to Faine Labs automation updates!');
+      showToast('Subscribed to Faine Labs roofing revenue automation updates!');
     });
   }
 }
 
 /* ==========================================================================
    7. Floating Quick Widget
-   ========================================================================== */
+   ========================================================================= */
 function initFloatingWidget() {
   const toggleBtn = document.getElementById('floatingWidgetToggle');
   const widgetBox = document.getElementById('floatingWidgetBox');
@@ -549,7 +564,7 @@ function initFloatingWidget() {
 
 /* ==========================================================================
    8. Utility Helpers
-   ========================================================================== */
+   ========================================================================= */
 function initCurrentYear() {
   const yearSpan = document.getElementById('currentYear');
   if (yearSpan) {

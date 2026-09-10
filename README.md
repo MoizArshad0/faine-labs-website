@@ -1,6 +1,19 @@
-# Faine Labs — AI Lead Response & Revenue Automation Landing Page
+# Faine Labs — AI Lead Response & Revenue Automation for Roofing Companies
 
-A responsive, high-converting agency landing page for **Faine Labs** built with a **Crimson Red & Deep Black Theme**, interactive AI & SMS workflow simulators, 7 outcome-driven automation showcases, target service business positioning, and transparent month-to-month pricing.
+A responsive, high-converting agency landing page for **Faine Labs** built with a **Crimson Red & Deep Black Theme**, interactive AI & SMS workflow simulators, 8 outcome-driven roofing automation showcases, realistic revenue impact math, and transparent month-to-month pricing.
+
+**Faine Labs specializes exclusively in ROOFING COMPANIES.**
+
+---
+
+## 🎯 Agency Niche & Target Market
+
+Faine Labs is built specifically for:
+- Residential Roofing Contractors
+- Commercial Roofing Companies
+- Roof Repair Specialists
+- Roof Replacement Companies
+- Storm Damage & Insurance Restoration Contractors
 
 ---
 
@@ -16,33 +29,37 @@ A responsive, high-converting agency landing page for **Faine Labs** built with 
 
 ## ⚡ Core Features & Interactive Sandboxes
 
-1. **Interactive AI Chatbot Simulator**:
-   - Dynamic prompt chips (*"What automations are included?"*, *"How does Missed-Call Recovery work?"*, *"Book a 15-minute demo"*)
-   - Keyword recognition engine for instant qualification responses
-   - Simulated typing indicators and formatted message rendering
+1. **Roofing Hero Section**:
+   - High-impact positioning: *"Stop Losing Roofing Leads You Already Paid For."*
+   - Interactive 6-step workflow sequence and live stream ticker tracking real-time roofing leads and inspections.
 
-2. **Missed-Call Recovery & SMS Workflow Visualizer**:
-   - Step-by-step interactive simulation: Missed call detection &rarr; Sub-3s automated SMS &rarr; Prospect reply &rarr; AI qualification & booking link &rarr; Appointment confirmed in CRM
+2. **The Roofing Lead Leak (Problem Section)**:
+   - 6 Roofing-specific pain points: Calls missed while crews are on roofs, Homeowners calling 3–5 roofers at once, Sent estimates never followed up, Storm damage surges slipping away, $150+ paid ad leads wasted, and Disorganized inspection pipelines.
 
-3. **Built for Service Businesses**:
-   - Tailored positioning for Roofing, Home Services & Contractors, HVAC & Plumbing, Med Spas & Health Clinics, Real Estate, and Professional Services.
+3. **8 Outcome-Driven Roofing Automations**:
+   - Instant Roofing Lead Response (<5s)
+   - Missed Call Recovery (Sub-3s SMS Text-Back)
+   - AI Roofing Lead Qualification & Damage Intake
+   - Automated Roofing Follow-Up (Estimate & quote nurturing)
+   - Inspection & Estimate Booking (Direct calendar dispatch)
+   - Roofing Lead Nurturing (Long-cycle homeowner follow-up)
+   - Reputation & Review Automation (Post-job 5-star Google review collection)
+   - Roofing CRM & Pipeline Automation (Lead &rarr; Qualified &rarr; Inspection &rarr; Estimate &rarr; Won)
 
-4. **7 Outcome-Driven Systems**:
-   - Instant Lead Response
-   - Missed-Call Recovery
-   - AI Lead Qualification
-   - Automated Follow-Up
-   - Appointment Booking
-   - CRM & Pipeline Automation
-   - Lead Reactivation
+4. **The Roofing Lead Journey (How It Works)**:
+   - Complete 8-step journey visualizer from homeowner inquiry to booked inspection and closed contract.
 
-5. **Simple, Outcome-Focused Pricing**:
-   - $299/month Lead & Revenue Automation tier with full CRM pipeline, AI qualification, missed-call recovery, and ongoing optimization.
-   - Clear "What Happens Next?" 4-step walkthrough.
+5. **Interactive AI Chatbot Simulator**:
+   - Custom-trained roofing AI responses for prompt chips (*"What automations are included for roofers?"*, *"Missed-call recovery for roofers"*, *"Storm damage & insurance leads"*, *"Book a 15-minute demo"*).
 
-6. **Interactive Modals & Lead Capture**:
-   - 15-minute demo scheduling modal with time slot preferences
-   - Collapsible floating AI assistant widget in bottom-right corner
+6. **Missed Call & SMS Workflow Simulator**:
+   - Step-by-step homeowner conversation: Missed call while on a roof &rarr; Sub-3s text-back &rarr; Homeowner hail/leak inquiry &rarr; AI qualification & inspection booking &rarr; Confirmed inspection on estimator calendar.
+
+7. **Realistic Results & ROI Math**:
+   - Illustrative breakdown of recovering 3–5 lost roofing leads/month into completed replacements ($30k–$60k+ recovered revenue vs. $299/mo system).
+
+8. **Roofing-Specific FAQs & Demo Modal**:
+   - Addressing exclusive roofing focus, in-field crews, storm damage workflows, calendar sync, and fast 3–5 day turnkey onboarding.
 
 ---
 
@@ -59,19 +76,17 @@ If using VS Code, right-click `index.html` and click **"Open with Live Server"**
 npx -y serve .
 ```
 
-### Option 3: Deploy to Production
-Can be deployed in seconds with zero configuration to **Cloudflare Pages**, **Vercel**, **Netlify**, or **GitHub Pages**.
-
 ---
 
 ## 📁 File Structure
 
 ```
 d:/Faine Labs/
-├── index.html          # Semantic HTML5 landing page with all 7 outcome sections & interactive demo
+├── index.html          # Semantic HTML5 landing page with 8 roofing automation showcases & interactive demo
 ├── styles.css          # Crimson Red & Deep Black theme variables, glassmorphism, glowing neons, and animations
-├── app.js              # Interactive AI chat engine, SMS simulator, activity feed, and modal manager
+├── app.js              # Interactive Roofing AI chat engine, SMS simulator, activity feed, and modal manager
 ├── assets/
 │   └── favicon.svg     # Modern geometric Faine Labs SVG favicon in Crimson Red
-└── README.md           # Documentation and deployment instructions
+├── CNAME               # Domain mapping for fainelabs.com
+└── README.md           # Documentation and positioning guidelines
 ```
